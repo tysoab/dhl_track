@@ -1,28 +1,43 @@
+import { useState } from "react";
 import Button from "../ui/Button";
 import classes from "./shipmentDetail.module.css";
+import { useNavigate } from "react-router-dom";
 
 export default function ShipmentDetail({ data }) {
+  const navigate = useNavigate();
+  const [userInput, setUserInput] = useState(data["track_number"]);
+
+  function handleTrack(evet) {
+    evet.preventDefault();
+    navigate(`/track/${userInput}`);
+  }
+
   return (
     <div className="my-5">
       <div className="py-2" style={{ backgroundColor: "#e6e3e3" }}>
-        <div
-          className={`${classes["hero-fieldset"]} mx-auto text-dark border mt-4 py-0 px-0 rounded  border-2 bg-white d-flex justify-content-center`}
-        >
-          <div className="w-100 px-3">
-            <span className="tracking-text">Enter your tracking number(s)</span>
-            <div>
-              <input
-                type="text"
-                defaultValue={data["track_number"]}
-                placeholder="Enter your tracking number(s)"
-              />
+        <form onSubmit={handleTrack}>
+          <div
+            className={`${classes["hero-fieldset"]} mx-auto text-dark border mt-4 py-0 px-0 rounded  border-2 bg-white d-flex justify-content-center`}
+          >
+            <div className="w-100 px-3">
+              <span className="tracking-text">
+                Enter your tracking number(s)
+              </span>
+              <div>
+                <input
+                  type="text"
+                  value={userInput}
+                  onChange={(e) => setUserInput((input) => e.target.value)}
+                  placeholder="Enter your tracking number(s)"
+                />
+              </div>
             </div>
+            <Button
+              label={"Track"}
+              className="rounded-end border-2 h-100 w-100"
+            />
           </div>
-          <Button
-            label={"Track"}
-            className="rounded-end border-2 h-100 w-100"
-          />
-        </div>
+        </form>
 
         <div className={classes["shipment-details"]}>
           <div className={classes["overview"]}>

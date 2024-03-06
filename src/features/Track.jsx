@@ -21,7 +21,7 @@ export default function Track() {
       setData(res);
     }
     getData();
-  }, []);
+  }, [trackId]);
 
   let content;
   if (isLoading)

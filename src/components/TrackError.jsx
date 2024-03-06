@@ -1,30 +1,45 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../ui/Button";
 import classes from "./TrackError.module.css";
+import { useState } from "react";
 
 export default function TrackError({ trackId }) {
+  const navigate = useNavigate();
+  const [userInput, setUserInput] = useState(trackId);
+
+  function handleTrack(evet) {
+    evet.preventDefault();
+    navigate(`/track/${userInput}`);
+  }
+
   return (
     <div style={{ margin: "60px 0" }}>
       <h2 className="fs-1 fw-normal text-center">TRACK: EXPRESS</h2>
 
       <div className="py-2" style={{ backgroundColor: "#e6e3e3" }}>
-        <div
-          className={`${classes["hero-fieldset"]} mx-auto text-dark border mt-4 py-0 px-0 rounded  border-2 bg-white d-flex justify-content-center`}
-        >
-          <div className="w-100 px-3">
-            <span className="tracking-text">Enter your tracking number(s)</span>
-            <div>
-              <input
-                type="text"
-                defaultValue={trackId}
-                placeholder="Enter your tracking number(s)"
-              />
+        <form onSubmit={handleTrack}>
+          <div
+            className={`${classes["hero-fieldset"]} mx-auto text-dark border mt-4 py-0 px-0 rounded  border-2 bg-white d-flex justify-content-center`}
+          >
+            <div className="w-100 px-3">
+              <span className="tracking-text">
+                Enter your tracking number(s)
+              </span>
+              <div>
+                <input
+                  type="text"
+                  onChange={(e) => setUserInput((input) => e.target.value)}
+                  value={userInput}
+                  placeholder="Enter your tracking number(s)"
+                />
+              </div>
             </div>
+            <Button
+              label={"Track"}
+              className="rounded-end border-2 h-100 w-100"
+            />
           </div>
-          <Button
-            label={"Track"}
-            className="rounded-end border-2 h-100 w-100"
-          />
-        </div>
+        </form>
         <div
           className={`${classes["error-container"]} py-3 px-5 my-3 mx-auto rounded`}
           style={{
