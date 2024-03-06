@@ -1,0 +1,128 @@
+.hero-fieldset {
+  width: 50%;
+}
+
+.hero-fieldset span {
+  font-size: 10px;
+}
+
+.hero-fieldset input {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 15px;
+  outline: none;
+  border: 0;
+}
+
+.shipment-details {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 60%;
+  margin: 30px auto;
+  background-color: #ffffff;
+}
+
+.overview div {
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+  position: relative;
+}
+
+.overview p {
+  font-size: 12px;
+}
+
+.overview div:nth-child(1) button {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  background-color: transparent;
+  color: red;
+  font-weight: 600;
+  font-size: 14px;
+  border: 2px solid red;
+  border-radius: 4px;
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.overview div:nth-child(3) button {
+  background-color: red;
+  color: white;
+  padding: 7px 20px;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.overview div:last-child {
+  border-bottom: 0;
+}
+
+.accordion-flush-container {
+  margin: 0 auto;
+  border-top: 2px solid #cccccc;
+  background-color: transparent;
+  padding: 0;
+}
+
+.accordion-flush-container button {
+  background-color: transparent;
+}
+
+.accordion-flush-container p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.accordion-flush-container ul {
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #ccc;
+}
+
+.accordion-flush-container ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.accordion-flush-container ul li p,
+.accordion-flush-container ul li h6 {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .hero-fieldset {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shipment-details {
+    width: 90%;
+  }
+
+  .shipment-details div:nth-child(1) button {
+    right: 8px;
+    top: 6px;
+    padding: 5px 15px;
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .accordion-flush-container {
+    width: 90%;
+  }
+}

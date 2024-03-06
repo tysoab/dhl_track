@@ -1,0 +1,123 @@
+/* hero section  */
+
+.hero-section {
+  background-image: url("https://dhlexpresscommerce.com/Images/Intro/DHL/header-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 450px;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.hero-section h1 {
+  width: 50%;
+  margin: auto;
+}
+
+.hero-fieldset {
+  width: 50%;
+}
+
+.hero-fieldset span {
+  font-size: 10px;
+}
+
+.hero-fieldset input {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+  outline: none;
+  border: 0;
+}
+
+.hero-section .hero-footer {
+  border: 0px solid #f3db7c;
+  color: #000;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: flex;
+}
+
+.hero-footer div {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  color: #111010;
+  border: 1px solid rgb(236, 233, 233);
+  background-color: white;
+  height: 150px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.hero-footer div:hover {
+  box-shadow: -2px -4px 10px rgba(0, 0, 0, 0.5), 2px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-footer div h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hero-footer div p {
+  font-size: 12px;
+}
+
+.hero-footer div img {
+  width: 50px;
+}
+
+.hero-footer div:nth-child(3) {
+  margin-left: -5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-footer .top-corner-card {
+  background-color: #ecc423;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: -10px;
+  top: 0px;
+  transform: rotateX(-180deg);
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    width: 100%;
+    padding: 0 20px;
+    font-weight: 500;
+  }
+
+  .hero-fieldset {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-section .hero-footer {
+    position: unset;
+    margin-top: 25px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: unset;
+  }
+
+  .hero-footer div {
+    width: 90%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .hero-footer div:nth-child(3) {
+    margin-left: 20px;
+  }
+}

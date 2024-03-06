@@ -1,0 +1,8 @@
+.control-action button {
+  background-color: red;
+  color: #f9f9f9;
+  padding: 7px 25px;
+  border: 0;
+  font-size: 20px;
+  font-weight: 500;
+}

@@ -1,0 +1,100 @@
+.header,
+.header-onscroll {
+  background: linear-gradient(
+    to right,
+    #ffcc00,
+    #ffcc00 40%,
+    #ffcc00 40%,
+    #ecc423 50%,
+    #f3db7c 80%
+  );
+}
+
+.header img,
+.header-onscroll img {
+  width: 170px;
+  object-fit: cover;
+}
+
+.header-onscroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+}
+
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.header ul,
+.header2 ul,
+.header-onscroll ul {
+  display: flex;
+  gap: 40px;
+}
+
+.header ul li,
+.header2 ul li,
+.header2 div li,
+.header-onscroll ul li {
+  /* padding: 10px 0; */
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+
+header ul li span,
+.header2 ul li i,
+.header2 div li i,
+.header-onscroll ul li i {
+  font-size: 12px;
+}
+
+.header2 ul li i,
+.header2 div li i,
+.header2 ul li i:hover,
+.header2 div li i:hover {
+  margin-top: 5px;
+  width: 14px;
+  text-decoration: none;
+}
+
+.header ul li:hover,
+.header2 ul li:hover,
+.header2 div li:hover,
+.header-onscroll ul li:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.header2 ul li:hover,
+.header2 div li:hover,
+.header-onscroll ul li:hover,
+.active {
+  border-bottom: 2px solid red;
+}
+
+/*
+drop for track
+*/
+
+.drop {
+  left: 0%;
+  right: 0%;
+}
+
+@media (max-width: 768px) {
+  .header,
+  .header2,
+  .header-onscroll {
+    display: none;
+  }
+}

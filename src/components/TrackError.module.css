@@ -1,0 +1,43 @@
+.hero-fieldset {
+  width: 50%;
+}
+
+.hero-fieldset span {
+  font-size: 10px;
+}
+
+.hero-fieldset input {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 15px;
+  outline: none;
+  border: 0;
+}
+
+.error-container {
+  width: 50%;
+  margin: auto;
+}
+
+.accordion-flush-container {
+  width: 50%;
+  margin: 20px auto;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+}
+
+@media (max-width: 768px) {
+  .hero-fieldset {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .error-container {
+    width: 90%;
+  }
+
+  .accordion-flush-container {
+    width: 90%;
+  }
+}
